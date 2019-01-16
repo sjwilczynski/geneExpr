@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+microarray <- t(read.csv(file="./microarray_data.csv", header=TRUE, sep=","))
+microarray <- microarray[2:970, ]
+class(microarray) <- "numeric"
+```
+
+```{r}
+library(varclust)
+set.seed(42)
+
+max.dim     <- 8 # maximal subspace dimension
+numb.cores  <- 5 # number of processor's cores to use
+numb.runs   <- 30 # number of random initializations
+max.iter    <- 40 # number of iterations of the algorithm
+clusts      <- c(50, 100, 150, 200) #number of clusters to test
+
+
+for(num_clust in clusts){
+  start.time <- Sys.time()
+  print(paste("Starting mlcc.reps for", num_clust, "clusters", sep = " "))
+  res <- mlcc.reps(microarray, numb.clusters = num_clust, numb.runs = numb.runs, 
+                   max.dim = max.dim, numb.cores = numb.cores, max.iter = max.iter)
+  print(paste("Finished mlcc.reps for", num_clust, "clusters", sep = " "))
+  print("Saving results")
+  filename = paste("mlcc_results/output", paste(num_clust, max.dim, numb.runs, max.iter, sep="_"), ".RData", sep = "")
+  save(res, file = filename)
+  #for saving a bit of memory 
+  rm(res)
+  end.time <- Sys.time()
+  print(difftime(end.time, start.time, units = "mins"))
+}
+```
