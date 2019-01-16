@@ -37,3 +37,15 @@ for(num_clust in clusts){
   print(difftime(end.time, start.time, units = "mins"))
 }
 ```
+```{r}
+load("./mlcc_results/output100_8_30_40.RData")
+res100 <- get("res")
+load("./mlcc_results/output50_8_30_40.RData")
+res50<-get("res")
+dims50 <- sapply(res50$basis, ncol)
+hist(dims50)
+dims100 <- sapply(res100$basis, ncol)
+hist(dims100)
+print(paste(res50$BIC, res100$BIC))
+```
+
