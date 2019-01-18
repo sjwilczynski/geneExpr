@@ -1,4 +1,5 @@
-microarray_data.csv
-labels_for_microarray_data.csv
+data/*
 .ipynb_checkpoints/
 .Rproj.user
+.RData
+.Rhistory

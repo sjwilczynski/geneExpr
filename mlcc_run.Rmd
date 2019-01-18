@@ -6,7 +6,7 @@ output: html_notebook
 
 
 ```{r}
-microarray <- t(read.csv(file="./microarray_data.csv", header=TRUE, sep=","))
+microarray <- t(read.csv(file="./data/microarray_data.csv", header=TRUE, sep=","))
 microarray <- microarray[2:970, ]
 class(microarray) <- "numeric"
 ```
