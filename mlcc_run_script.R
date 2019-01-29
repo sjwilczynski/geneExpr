@@ -1,24 +1,15 @@
----
-title: "R Notebook"
-output: html_notebook
----
-
-
-
-```{r}
-microarray <- as.matrix(read.csv(file="./data/microarray_train.csv", header=TRUE, sep=","))
-```
-
-```{r}
 library(varclust)
 set.seed(42)
 
-max.dim     <- 8 # maximal subspace dimension
-numb.cores  <- 5 # number of processor's cores to use
-numb.runs   <- 30 # number of random initializations
-max.iter    <- 40 # number of iterations of the algorithm
-clusts      <- c(50, 100, 150, 200) #number of clusters to test
+args        <- commandArgs(trailingOnly = TRUE)
+max.dim     <- as.numeric(args[1]) # maximal subspace dimension
+numb.cores  <- as.numeric(args[2]) # number of processor's cores to use
+numb.runs   <- as.numeric(args[3]) # number of random initializations
+max.iter    <- as.numeric(args[4]) # number of iterations of the algorithm
+clusts      <- eval(parse(text=args[5])) #number of clusters to test
 
+
+microarray <- as.matrix(read.csv(file="./data/microarray_train.csv", header=TRUE, sep=","))
 
 for(num_clust in clusts){
   start.time <- Sys.time()
@@ -34,5 +25,3 @@ for(num_clust in clusts){
   end.time <- Sys.time()
   print(difftime(end.time, start.time, units = "mins"))
 }
-```
-
