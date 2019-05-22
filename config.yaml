@@ -1,6 +1,6 @@
 notebook: Regularized
-target_directory: regularized
+target_directory: regularized/
 scoring: roc_auc
 cv: 4
 n_iter: 30
-n_jobs: 3
+n_jobs: 4

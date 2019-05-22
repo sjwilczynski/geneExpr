@@ -14,12 +14,10 @@ n_iter = int(config['n_iter'])
 n_jobs = int(config['n_jobs'])
 notebook = config['notebook']
 
-params_str = '{}_{}_{}'.format(scoring, cv, n_iter)
+params_str = '_{}_{}_{}'.format(scoring, cv, n_iter)
 
 pm.execute_notebook(
    notebook + '.ipynb',
    target_directory + notebook + params_str +'.ipynb',
    parameters = dict(scoring=scoring, cv=cv, n_iter=n_iter, n_jobs=n_jobs)
 )
-
-
