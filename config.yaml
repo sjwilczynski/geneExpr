@@ -1,5 +1,5 @@
 notebook: Regularized
-target_directory: regularized/
+target_directory: 2305/
 scoring: roc_auc
 cv: 4
 n_iter: 30
