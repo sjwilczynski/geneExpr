@@ -1,6 +1,8 @@
-notebook: Regularized
-target_directory: 0506/
+notebook: ModelSelection
+target_directory: 0307/
 scoring: roc_auc
 cv: 4
-n_iter: 100
+cv_out: 5
+cv_in: 2
+n_iter: 50
 n_jobs: 4
