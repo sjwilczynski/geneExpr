@@ -1,6 +1,6 @@
-notebook: fDNN
-target_directory: 2905/
-scoring: recall
+notebook: Regularized
+target_directory: 0506/
+scoring: roc_auc
 cv: 4
 n_iter: 100
 n_jobs: 4
