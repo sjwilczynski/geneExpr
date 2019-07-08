@@ -1,4 +1,4 @@
-notebook: ModelSelection
+notebook: DimensionalityReduction
 target_directory: 0307/
 scoring: roc_auc
 cv: 4
