@@ -3,6 +3,7 @@ channels:
   - r
   - pytorch
   - terhorst
+  - bioconda
   - conda-forge
   - defaults
 dependencies:
@@ -30,6 +31,7 @@ dependencies:
   - beautifulsoup4=4.7.1=py37_1
   - binutils_impl_linux-64=2.31.1=h6176602_1
   - binutils_linux-64=2.31.1=h6176602_7
+  - bioconductor-impute=1.56.0=r351h9ac9557_0
   - bitarray=0.8.3=py37h14c3975_0
   - bkcharts=0.2=py37_0
   - black=19.3b0=py_0
@@ -291,6 +293,7 @@ dependencies:
   - r-glmnet=2.0_18=r35h9bbef5b_0
   - r-glue=1.3.1=r351hcdcec82_0
   - r-gower=0.2.1=r35hcdcec82_0
+  - r-gsa=1.03.1=r351_0
   - r-gtable=0.3.0=r351h6115d3f_0
   - r-haven=2.1.1=r351h0357c0b_0
   - r-hexbin=1.27.3=r351h9bbef5b_0
@@ -318,6 +321,7 @@ dependencies:
   - r-markdown=1.0=r35hcdcec82_0
   - r-mass=7.3_51.4=r351hcdcec82_0
   - r-matrix=1.2_17=r351hcdcec82_0
+  - r-matrixstats=0.54.0=r351h96ca727_1000
   - r-memoise=1.1.0=r351h6115d3f_1001
   - r-mgcv=1.8_28=r351hcdcec82_0
   - r-mime=0.7=r35hcdcec82_0
@@ -328,6 +332,7 @@ dependencies:
   - r-nnet=7.3_12=r351h96ca727_1002
   - r-numderiv=2016.8_1.1=r35h6115d3f_0
   - r-openssl=1.4=r35h9c8475f_0
+  - r-openxlsx=4.1.0.1=r35h0357c0b_0
   - r-pbdzmq=0.3_3=r351h193a840_1000
   - r-pillar=1.4.2=h6115d3f_0
   - r-pkgconfig=2.0.2=r351h6115d3f_1001
@@ -360,9 +365,11 @@ dependencies:
   - r-rsqlite=2.1.1=r351h29659fb_1000
   - r-rstudioapi=0.10=r351h6115d3f_0
   - r-rvest=0.3.4=r351h6115d3f_0
+  - r-samr=3.0=r351h14c3975_0
   - r-scales=1.0.0=r351h29659fb_1001
   - r-selectr=0.4_1=r351h6115d3f_1000
   - r-shiny=1.3.2=r351h6115d3f_0
+  - r-shinyfiles=0.7.3=r351_0
   - r-sourcetools=0.1.7=r351hf484d3e_1000
   - r-spatial=7.3_11=r351h96ca727_1002
   - r-squarem=2017.10_1=r351h6115d3f_1001
@@ -389,6 +396,7 @@ dependencies:
   - r-xts=0.11_2=r35hcdcec82_0
   - r-yaml=2.2.0=r351h96ca727_1001
   - r-zeallot=0.1.0=r351h6115d3f_1000
+  - r-zip=2.0.3=r351hcdcec82_0
   - r-zoo=1.8_6=r35hcdcec82_0
   - readline=7.0=h7b6447c_5
   - requests=2.21.0=py37_0
@@ -432,7 +440,7 @@ dependencies:
   - toml=0.10.0=py_0
   - toolz=0.9.0=py37_0
   - torchvision=0.2.2=py_3
-  - tornado=6.0.2=py37h7b6447c_0
+  - tornado=6.0.3=py37h516909a_0
   - tqdm=4.31.1=py37_1
   - traitlets=4.3.2=py37_0
   - unicodecsv=0.14.1=py37_0
