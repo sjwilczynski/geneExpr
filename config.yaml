@@ -1,8 +1,8 @@
-notebook: FeatureSelection
-target_directory: 0307/
+notebooks: [RandomLogisticRegression]
+target_directory: 1807/
 scoring: roc_auc
 cv: 4
 cv_out: 5
 cv_in: 2
-n_iter: 100
-n_jobs: 10
+n_iter: 50
+n_jobs: 4
